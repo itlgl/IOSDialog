@@ -1,0 +1,40 @@
+<resources>
+
+    <string name="ios_dialog_default_ok">我知道了</string>
+    <string name="iossheet_cancel">取消</string>
+    
+    <color name="ios_blue">#FF037BFF</color>
+    <color name="ios_red">#FFFD4A2E</color>
+    <color name="ios_grey">#FFC6C6C6</color>
+    <color name="ios_bg">#FFE9E9E9</color>
+    <color name="ios_btn_normal">#FFE9E9E9</color>
+    <color name="ios_btn_press">#FFCDCDCD</color>
+
+    <dimen name="ios_dialog_radius">10dp</dimen>
+    <dimen name="ios_sheet_dialog_radius">10dp</dimen>
+    
+    <!-- IOS外观Dialog -->
+    <style name="ios_dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/iosdialog_bg</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    
+    <!-- IOS外观SheetDialog -->
+    <style name="ios_sheet_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!-- IOSSheetDialog动画 -->
+    <style name="ios_sheet_anim" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/iossheet_in</item>  
+        <item name="android:windowExitAnimation">@anim/iossheet_out</item>
+    </style>
+</resources>
