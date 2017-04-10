@@ -21,6 +21,7 @@ new IOSDialog.Builder(context)
     .setMessage("message").show();
 ```
 默认样式的Dialog带有一个确认按钮，样式如下：
+
 ![IOS style dialog](https://github.com/liguanliang2014/IOSDialog/raw/master/example/screenshot/device-2017-04-10-112933.png)
 
 ### 自定义Dialog的按钮
@@ -47,6 +48,7 @@ new IOSDialog.Builder(context)
         }).show();
 ```
 显示如下：
+
 ![IOS style dialog2](https://github.com/liguanliang2014/IOSDialog/raw/master/example/screenshot/device-2017-04-10-113008.png)
 
 ### IOS sheet样式的Dialog
@@ -58,10 +60,12 @@ IOSSheetDialog dialog2 = new IOSSheetDialog.Builder(context)
         .setTitle("title").setData(items, null).show();
 ```
 显示如下：
+
 ![IOS style sheet](https://github.com/liguanliang2014/IOSDialog/raw/master/example/screenshot/device-2017-04-10-113032.png)
 
 ## 关于我
 一个Android开发者
+
 邮箱: ligl6688@gmail.com
 
 ## github Quick setup
