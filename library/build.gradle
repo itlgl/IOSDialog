@@ -37,7 +37,7 @@ uploadArchives{
         repository(url:"file://${deployPath.absolutePath}");
         pom.project{
             groupId "com.ligl"
-            artifactId "IOSDialog"
+            artifactId "iosdialog"
             version "1.0.0"
         };
     }
