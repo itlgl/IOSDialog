@@ -63,6 +63,11 @@ IOSSheetDialog dialog2 = new IOSSheetDialog.Builder(context)
 
 ![IOS style sheet](https://github.com/liguanliang2014/IOSDialog/raw/master/example/screenshot/device-2017-04-10-113032.png)
 
+## 导出maven包
+本项目依赖Android Studio编译。
+
+在Android Studio中打开terminal，跳转到library目录下，使用命令`gradle uploadArchives`即可导出maven包。
+
 ## 关于我
 一个Android开发者
 
