@@ -68,6 +68,9 @@ IOSSheetDialog dialog2 = new IOSSheetDialog.Builder(context)
 
 在Android Studio中打开terminal，跳转到library目录下，使用命令`gradle uploadArchives`即可导出maven包。
 
+## 参考
+[IOS_Dialog_Library](https://github.com/zhangjoey1984/IOS_Dialog_Library)
+
 ## 关于我
 一个Android开发者
 
