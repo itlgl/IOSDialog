@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.ligl:IOSDialog:1.0.0'
+    compile 'com.ligl:iosdialog:1.0.0'
 }
 ```
 
