@@ -5,7 +5,7 @@ A IOS style dialog for Android developer
 Gradle
 ```java
 repositories {
-    maven { url 'https://raw.githubusercontent.com/liguanliang2014/mvn-repo/master'}
+    maven { url 'https://raw.githubusercontent.com/ligl01/mvn-repo/master'}
 }
 
 dependencies {
@@ -22,7 +22,7 @@ new IOSDialog.Builder(context)
 ```
 默认样式的Dialog带有一个确认按钮，样式如下：
 
-![IOS style dialog](https://github.com/liguanliang2014/IOSDialog/raw/master/example/screenshot/device-2017-04-10-112933.png)
+![IOS style dialog](https://github.com/ligl01/IOSDialog/raw/master/example/screenshot/device-2017-04-10-112933.png)
 
 ### 自定义Dialog的按钮
 IOSDialog支持最多两个按钮，如“确认”和“取消”按钮
@@ -49,7 +49,7 @@ new IOSDialog.Builder(context)
 ```
 显示如下：
 
-![IOS style dialog2](https://github.com/liguanliang2014/IOSDialog/raw/master/example/screenshot/device-2017-04-10-113008.png)
+![IOS style dialog2](https://github.com/ligl01/IOSDialog/raw/master/example/screenshot/device-2017-04-10-113008.png)
 
 ### IOS sheet样式的Dialog
 ```java
@@ -61,7 +61,7 @@ IOSSheetDialog dialog2 = new IOSSheetDialog.Builder(context)
 ```
 显示如下：
 
-![IOS style sheet](https://github.com/liguanliang2014/IOSDialog/raw/master/example/screenshot/device-2017-04-10-113032.png)
+![IOS style sheet](https://github.com/ligl01/IOSDialog/raw/master/example/screenshot/device-2017-04-10-113032.png)
 
 ## 导出maven包
 本项目依赖Android Studio编译。
@@ -80,7 +80,7 @@ IOSSheetDialog dialog2 = new IOSSheetDialog.Builder(context)
 
 ### Quick setup — if you’ve done this kind of thing before
 
-[HTTP](https://github.com/liguanliang2014/IOSDialog.git) or [SSH](git@github.com:liguanliang2014/IOSDialog.git)
+[HTTP](https://github.com/ligl01/IOSDialog.git) or [SSH](git@github.com:ligl01/IOSDialog.git)
 
 ### …or create a new repository on the command line
 
@@ -89,14 +89,14 @@ echo "# IOSDialog" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin git@github.com:liguanliang2014/IOSDialog.git
+git remote add origin git@github.com:ligl01/IOSDialog.git
 git push -u origin master
 ```
 
 ### …or push an existing repository from the command line
 
 ```cmd
-git remote add origin git@github.com:liguanliang2014/IOSDialog.git
+git remote add origin git@github.com:ligl01/IOSDialog.git
 git push -u origin master
 ```
 
