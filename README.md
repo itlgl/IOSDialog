@@ -4,12 +4,9 @@ A IOS style dialog for Android developer
 ## 如何使用
 Gradle
 ```java
-repositories {
-    maven { url 'https://raw.githubusercontent.com/ligl01/mvn-repo/master'}
-}
 
 dependencies {
-    compile 'com.ligl:iosdialog:1.0.0'
+    compile 'com.itlgl:iosdialog:1.0.0'
 }
 ```
 
