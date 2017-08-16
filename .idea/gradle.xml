@@ -9,7 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/example" />
-            <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/iosdialog" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

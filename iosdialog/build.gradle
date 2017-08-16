@@ -66,6 +66,8 @@ install {
         pom {
             project {
                 packaging 'aar'
+                groupId 'com.itlgl'
+
                 name 'A IOS style dialog for Android developer'
                 url siteUrl
                 licenses {
