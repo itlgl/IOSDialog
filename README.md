@@ -60,10 +60,14 @@ IOSSheetDialog dialog2 = new IOSSheetDialog.Builder(context)
 
 ![IOS style sheet](https://github.com/ligl01/IOSDialog/raw/master/example/screenshot/device-2017-04-10-113032.png)
 
-## 导出maven包
+## 上传到远程仓库
 本项目依赖Android Studio编译。
 
-在Android Studio中打开terminal，跳转到library目录下，使用命令`gradle uploadArchives`即可导出maven包。
+现在这个项目分别上传到了Maven和Jcenter仓库，默认情况下是上传到Maven仓库，项目不需要做修改。在Android Studio中运行`uploadArchives`的task即可上传到Maven仓库中。
+
+如果上传到Jcenter仓库，需要修改`./iosdialog/gradle.properties`文件下的RELEASE_REPOSITORY_URL和SNAPSHOT_REPOSITORY_URL，都修改为`https://api.bintray.com/maven/itlgl/maven/iosdialog/;publish=1`即可（不知道Jcenter是否有SNAPSHOT仓库位置，都填写成正式位置仓库url），另外还需要修改`USER_HOME/.gradle/gradle.properties`中的用户名和密码。然后在Android Studio中运行`uploadArchives`的task即可上传到Jcenter仓库中。
+
+如果想生成到本地，看一下生成的对不对，将RELEASE_REPOSITORY_URL和SNAPSHOT_REPOSITORY_URL修改为本地位置即可，比如`file://D:/temp/`。
 
 ## 参考
 [IOS_Dialog_Library](https://github.com/zhangjoey1984/IOS_Dialog_Library)
