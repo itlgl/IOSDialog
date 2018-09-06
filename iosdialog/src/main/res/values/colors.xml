@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ios_blue">#FF037BFF</color>
+    <color name="ios_red">#FFFD4A2E</color>
+    <color name="ios_grey">#FFC6C6C6</color>
+    <color name="ios_bg">#FFE9E9E9</color>
+    <color name="ios_btn_normal">#FFE9E9E9</color>
+    <color name="ios_btn_press">#FFCDCDCD</color>
+</resources>

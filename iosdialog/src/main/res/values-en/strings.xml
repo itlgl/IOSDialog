@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ios_dialog_default_ok">I know</string>
+    <string name="iossheet_cancel">cancel</string>
+</resources>

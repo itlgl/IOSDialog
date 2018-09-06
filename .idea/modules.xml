@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/IOSDialog.iml" filepath="$PROJECT_DIR$/IOSDialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
       <module fileurl="file://$PROJECT_DIR$/iosdialog/iosdialog.iml" filepath="$PROJECT_DIR$/iosdialog/iosdialog.iml" />
-      <module fileurl="file://D:\github\IOSDialog\library\library.iml" filepath="D:\github\IOSDialog\library\library.iml" />
     </modules>
   </component>
 </project>

@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -18,7 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /** 
- * @author ligl
+ * @author itlgl
  * 
  */
 public class IOSSheetDialog extends Dialog implements DialogInterface {
@@ -90,7 +91,12 @@ public class IOSSheetDialog extends Dialog implements DialogInterface {
             Button btn_cancel = (Button) sheetView.findViewById(R.id.btn_cancel);
             
             // 设置标题
-            tvTitle.setText(mTitle);
+            // fix #1, if title is null, set tvTitle visibility GONE,and set first item background as top
+            if(TextUtils.isEmpty(mTitle)) {
+                tvTitle.setVisibility(View.GONE);
+            } else {
+                tvTitle.setText(mTitle);
+            }
             // 填充列表内容
             for (int i = 0, len = mItems.length; i < len; i++) {
                 
@@ -98,6 +104,12 @@ public class IOSSheetDialog extends Dialog implements DialogInterface {
                 Button btnItem = (Button) itemView.findViewById(R.id.btn_item);
                 btnItem.setText(mItems[i].name);
                 btnItem.setTextColor(mItems[i].color);
+                // fix #1, if title is null, set tvTitle visibility GONE,and set first item background as top
+                if(i == 0 && TextUtils.isEmpty(mTitle)) {
+                    View line = itemView.findViewById(R.id.line);
+                    line.setVisibility(View.GONE);
+                    btnItem.setBackgroundResource(R.drawable.iossheet_top_btn_selector);
+                }
                 if(i == mItems.length - 1) {
                     btnItem.setBackgroundResource(R.drawable.iossheet_bottom_btn_selector);
                 }

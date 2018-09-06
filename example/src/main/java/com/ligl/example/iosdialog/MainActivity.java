@@ -31,22 +31,46 @@ public class MainActivity extends Activity {
         btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                new IOSDialog.Builder(context).setTitle("提示").setMessage("这是一个ISO样式的dialog！").show();
+                new IOSDialog.Builder(context).setTitle("Tip").setMessage("IOS style dialog").show();
             }
         });
         ll.addView(btn);
 
         btn = new Button(this);
-        btn.setText("ios style dialog2");
+        btn.setText("ios style dialog without title");
+        btn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new IOSDialog.Builder(context).setMessage("IOS style dialog,have no title").show();
+            }
+        });
+        ll.addView(btn);
+
+        btn = new Button(this);
+        btn.setText("Custom Dialog button");
         btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 new IOSDialog.Builder(context)
-                        .setTitle("HEllo")
+                        .setTitle("title")
+                        .setMessage("message")
+                        .setPositiveButton("OK", null)
+                        .setNegativeButton("Cancel", null).show();
+            }
+        });
+        ll.addView(btn);
+
+        btn = new Button(this);
+        btn.setText("ios style dialog(multiple lines of text)");
+        btn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new IOSDialog.Builder(context)
+                        .setTitle("Hello")
                         .setMessage(
-                                "33333333333\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111112222222")
+                                "Test multiple lines of text\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111112222222")
                         // .setMessage("1")
-                        .setPositiveButton("确定",
+                        .setPositiveButton("OK",
                                 new DialogInterface.OnClickListener() {
 
                                     @Override
@@ -55,7 +79,7 @@ public class MainActivity extends Activity {
                                         // dialog.dismiss();
                                     }
                                 })
-                        .setNegativeButton("取消",
+                        .setNegativeButton("Cancel",
                                 new DialogInterface.OnClickListener() {
 
                                     @Override
@@ -77,7 +101,21 @@ public class MainActivity extends Activity {
                 items[0] = new IOSSheetDialog.SheetItem("item1", IOSSheetDialog.SheetItem.RED);
                 items[1] = new IOSSheetDialog.SheetItem("item2", IOSSheetDialog.SheetItem.BLUE);
                 IOSSheetDialog dialog2 = new IOSSheetDialog.Builder(context)
-                        .setTitle("这是标题").setData(items, null).show();
+                        .setTitle("Title").setData(items, null).show();
+            }
+        });
+        ll.addView(btn);
+
+        btn = new Button(this);
+        btn.setText("ios sheet style dialog without title");
+        btn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                IOSSheetDialog.SheetItem[] items = new IOSSheetDialog.SheetItem[2];
+                items[0] = new IOSSheetDialog.SheetItem("item1", IOSSheetDialog.SheetItem.RED);
+                items[1] = new IOSSheetDialog.SheetItem("item2", IOSSheetDialog.SheetItem.BLUE);
+                IOSSheetDialog dialog2 = new IOSSheetDialog.Builder(context)
+                        .setData(items, null).show();
             }
         });
         ll.addView(btn);

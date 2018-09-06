@@ -1,54 +1,40 @@
 # IOSDialog
 A IOS style dialog for Android developer
 
-## 如何使用
+## How to use
 Gradle
 ```java
 
 dependencies {
-    compile 'com.itlgl:iosdialog:1.0.0'
+    compile 'com.itlgl:iosdialog:1.0.1'
 }
 ```
 
-## 示例
-### 默认样式的Dialog
+## Example
+### Default style Dialog
 ```java
 new IOSDialog.Builder(context)
-    .setTitle("title")
-    .setMessage("message").show();
+    .setTitle("Tip")
+    .setMessage("IOS style dialog").show();
 ```
-默认样式的Dialog带有一个确认按钮，样式如下：
+The default style Dialog comes with a confirmation button with the following style:
 
-![IOS style dialog](https://github.com/ligl01/IOSDialog/raw/master/example/screenshot/device-2017-04-10-112933.png)
+![IOS style dialog](https://github.com/itlgl/IOSDialog/raw/master/example/screenshot/default_ios_style_dialog.png)
 
-### 自定义Dialog的按钮
-IOSDialog支持最多两个按钮，如“确认”和“取消”按钮
+### Custom Dialog button
+IOSDialog supports up to two buttons, such as the "confirm" and "cancel" buttons
 ```java
 new IOSDialog.Builder(context)
     .setTitle("title")
     .setMessage("message")
-    .setPositiveButton("OK",
-        new DialogInterface.OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // dialog.dismiss();
-            }
-        })
-    .setNegativeButton("取消",
-        new DialogInterface.OnClickListener() {
-
-             @Override
-             public void onClick(DialogInterface dialog, int which) {
-                 // dialog.dismiss();
-             }
-        }).show();
+    .setPositiveButton("OK", null)
+    .setNegativeButton("Cancel", null).show();
 ```
-显示如下：
+The display is as follows:
 
-![IOS style dialog2](https://github.com/ligl01/IOSDialog/raw/master/example/screenshot/device-2017-04-10-113008.png)
+![IOS style dialog2](https://github.com/ligl01/IOSDialog/raw/master/example/screenshot/custom_ios_dialog_title.png)
 
-### IOS sheet样式的Dialog
+### IOS sheet style Dialog
 ```java
 IOSSheetDialog.SheetItem[] items = new IOSSheetDialog.SheetItem[2];
 items[0] = new IOSSheetDialog.SheetItem("item1", IOSSheetDialog.SheetItem.RED);
@@ -56,9 +42,9 @@ items[1] = new IOSSheetDialog.SheetItem("item2", IOSSheetDialog.SheetItem.BLUE);
 IOSSheetDialog dialog2 = new IOSSheetDialog.Builder(context)
         .setTitle("title").setData(items, null).show();
 ```
-显示如下：
+The display is as follows:
 
-![IOS style sheet](https://github.com/ligl01/IOSDialog/raw/master/example/screenshot/device-2017-04-10-113032.png)
+![IOS style sheet](https://github.com/ligl01/IOSDialog/raw/master/example/screenshot/ios_sheet_dialog.png)
 
 ## 上传到远程仓库
 本项目依赖Android Studio编译。
