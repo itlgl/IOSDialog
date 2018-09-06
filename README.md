@@ -21,6 +21,16 @@ The default style Dialog comes with a confirmation button with the following sty
 
 ![IOS style dialog](https://github.com/itlgl/IOSDialog/raw/master/example/screenshot/default_ios_style_dialog.png)
 
+## CUstom Dialog without title
+```java
+new IOSDialog.Builder(context)
+    .setMessage("IOS style dialog,have no title").show();
+```
+
+The display is as follows:
+
+![IOS style dialog no title](https://github.com/ligl01/IOSDialog/raw/master/example/screenshot/custom_ios_dialog_no_title.png)
+
 ### Custom Dialog button
 IOSDialog supports up to two buttons, such as the "confirm" and "cancel" buttons
 ```java
@@ -32,7 +42,7 @@ new IOSDialog.Builder(context)
 ```
 The display is as follows:
 
-![IOS style dialog2](https://github.com/ligl01/IOSDialog/raw/master/example/screenshot/custom_ios_dialog_title.png)
+![IOS style dialog2](https://github.com/ligl01/IOSDialog/raw/master/example/screenshot/custom_ios_dialog_button.png)
 
 ### IOS sheet style Dialog
 ```java
